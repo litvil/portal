@@ -1,5 +1,5 @@
 set :port, 22
-set :user, 'deployer'
+set :user, 'rails'
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
@@ -9,7 +9,7 @@ server '104.131.220.139',
        user: fetch(:user),
        primary: true
 
-set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
+set :deploy_to, "/home/#{fetch(:user)}"
 
 set :ssh_options, {
                     forward_agent: true,

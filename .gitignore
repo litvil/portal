@@ -16,3 +16,4 @@ doc/
 .DS_Store
 .idea
 .keep
+database.yml
