@@ -2,8 +2,8 @@
 #### Uncomment in before/after fork to make this happy
 
 worker_processes 4
-user "unprivileged_user", "unprivileged_group"
-working_directory "/u/apps/yourappdirectory/current" # available in 0.94.0+
+user "rails"
+working_directory "/home/rails/current" # available in 0.94.0+
 
 listen "/tmp/.sock", :backlog => 64
 listen 8080, :tcp_nopush => true
@@ -11,10 +11,10 @@ listen 8080, :tcp_nopush => true
 timeout 30
 
 # feel free to point this anywhere accessible on the filesystem
-pid "/u/apps/yourappdirectory/shared/pids/unicorn.pid"
+pid "/home/rails/shared/pids/unicorn.pid"
 
-stderr_path "/u/apps/yourappdirectory/shared/log/unicorn.stderr.log"
-stdout_path "/u/apps/yourappdirectory/shared/log/unicorn.stdout.log"
+stderr_path "/home/rails/shared/log/unicorn.stderr.log"
+stdout_path "/home/rails/shared/log/unicorn.stdout.log"
 
 # combine REE with "preload_app true" for memory savings
 # http://rubyenterpriseedition.com/faq.html#adapt_apps_for_cow
