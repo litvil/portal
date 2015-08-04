@@ -12,12 +12,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 
+gem 'capistrano', '~> 3.3.5'
+gem 'capistrano-rails', '~> 1.1.2'
+
 group :development, :test do
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano3-unicorn'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
